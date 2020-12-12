@@ -1,6 +1,10 @@
-### Hi there 👋
+### Hello you all, my name is Verônica, I am 25 years old and I'm a Software Developer since 2012 and I'm passionate about A.I and everything relacted. I want to collaborate with more open source projects and because this I go to use more of the github community. Good bye and thanks for all the fish. 👋
 
-**If you don't know me, let me show you all about me 😄 ** 
+[![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/veronicapptoledo/)](https://www.linkedin.com/in/veronicapptoledo/)
+[![Instagram Badge](https://img.shields.io/badge/-Instagram-purple?style=flat-square&logo=Instagram&logoColor=white&link=https://www.instagram.com/misakive/)](https://www.instagram.com/misakive/)
+[![Gmail Badge](https://img.shields.io/badge/-Gmail-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:anajuliabit@gmail.com)](mailto:vntoledo30@gmail.com)
+
+**If you don't know me, let me show you all about me 😄** 
 
 Here are some ideas to get you started:
 
