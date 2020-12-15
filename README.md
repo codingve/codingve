@@ -4,6 +4,7 @@
 [![Instagram Badge](https://img.shields.io/badge/-Instagram-purple?style=flat-square&logo=Instagram&logoColor=white&link=https://www.instagram.com/misakive/)](https://www.instagram.com/misakive/)
 [![Gmail Badge](https://img.shields.io/badge/-Gmail-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:anajuliabit@gmail.com)](mailto:vntoledo30@gmail.com)
 
+
 **If you don't know me, let me show you all about me 😄** 
 
 - 🔭 I'm currently working on  [Lively Férias Compartilhada](https://lively.com.br/) with Fullstack development.(React, Node)
@@ -24,3 +25,6 @@
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=misakive&layout=compact&bg_color=ffffff&text_color=333333">
 </details>
 <br/>
+
+
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=misakive" alt="misakive" /> </p>
