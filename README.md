@@ -6,8 +6,6 @@
 
 **If you don't know me, let me show you all about me 😄** 
 
-Here are some ideas to get you started:
-
 - 🔭 I'm currently working on  [Lively Férias Compartilhada](https://lively.com.br/) with Fullstack development.(React, Node)
 - 🌱 I'm currently learning React, React Native, Node and venturing into visual recognition
 - 👯 I'm looking to collaborate on all project where I can challenge myself.
