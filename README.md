@@ -15,7 +15,7 @@
 
 **If you don't know me, let me show you all about me 😄** 
 
-- 🔭 I'm currently working on  [AudSat](@AudSat) with Fullstack development.(React, Node)
+- 🔭 I'm currently working on  [AudSat](@AudSat) with Fullstack development.(Node)
 - 🌱 I'm currently learning React, React Native, Node and venturing into visual recognition
 - 👯 I'm looking to collaborate on all project where I can challenge myself.
 - 💬 Ask me about anything [here](https://github.com/misakive/misakive/issues)
