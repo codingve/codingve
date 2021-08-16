@@ -4,7 +4,7 @@
 </p>
 
 
-### Hello you all, my name is Verônica, I am 25 years old and I'm a Software Developer since 2012 and I'm passionate about A.I and everything relacted. I want to collaborate with more open source projects and because this I go to use more of the github community. So long and thanks for all the fish. 👋
+### Hello you all, my name is Verônica, I am 26 years old and I'm a Software Developer since 2012 and I'm passionate about A.I and everything relacted. I want to collaborate with more open source projects and because this I go to use more of the github community. So long and thanks for all the fish. 👋
 
 
 
