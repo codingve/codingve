@@ -10,7 +10,7 @@
 
 [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/veronicapptoledo/)](https://www.linkedin.com/in/veronicapptoledo/)
 [![Instagram Badge](https://img.shields.io/badge/-Instagram-purple?style=flat-square&logo=Instagram&logoColor=white&link=https://www.instagram.com/misakive/)](https://www.instagram.com/misakive/)
-[![Gmail Badge](https://img.shields.io/badge/-Gmail-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:anajuliabit@gmail.com)](mailto:vntoledo30@gmail.com)
+[![Gmail Badge](https://img.shields.io/badge/-Gmail-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:vntoledo30@gmail.com)](mailto:vntoledo30@gmail.com)
 
 
 **If you don't know me, let me show you all about me 😄** 
