@@ -38,16 +38,6 @@
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
 
-<details>
-  <summary>:zap: GitHub Stats</summary>
-  <img src="https://github-readme-stats.vercel.app/api?username=codingve&show_icons=true&title_color=222222&icon_color=03A87C&text_color=333333&bg_color=ffffff">
-</details>
-
-<details>
-  <summary>:zap: Languages Used</summary>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=codingve&layout=compact&bg_color=ffffff&text_color=333333">
-</details>
-
 <br/>
 
 <p align="left"><img src="https://komarev.com/ghpvc/?username=codingve" alt="codingve" /></p>
