@@ -1,0 +1,36 @@
+name: Atualizar idade
+on:
+  schedule:
+    - cron: '0 3 * * *'   # todo dia às 00:00 (horário de Brasília)
+  workflow_dispatch:        # permite rodar manualmente também
+
+permissions:
+  contents: write
+
+jobs:
+  update-age:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Calcular idade e atualizar README
+        run: |
+          python3 - <<'EOF'
+          import re, datetime
+          nasc = datetime.date(1995, 3, 10)   # 10/03/1995
+          hoje = datetime.date.today()
+          idade = hoje.year - nasc.year - ((hoje.month, hoje.day) < (nasc.month, nasc.day))
+          with open('README.md', encoding='utf-8') as f:
+              conteudo = f.read()
+          novo = re.sub(r'(<!-- AGE:START -->).*?(<!-- AGE:END -->)',
+                        rf'\g<1>{idade}\g<2>', conteudo, flags=re.DOTALL)
+          if novo != conteudo:
+              with open('README.md', 'w', encoding='utf-8') as f:
+                  f.write(novo)
+          EOF
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --staged --quiet || git commit -m "chore: atualiza idade automaticamente"
+          git push
