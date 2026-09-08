@@ -1,36 +1,48 @@
-name: Atualizar idade
+name: Atualizar perfil (idade e experiência)
 on:
   schedule:
-    - cron: '0 3 * * *'   # todo dia às 00:00 (horário de Brasília)
-  workflow_dispatch:        # permite rodar manualmente também
+    - cron: '0 3 * * *'      # todo dia às 00:00 (horário de Brasília)
+  workflow_dispatch:          # permite rodar manualmente pela aba Actions
 
 permissions:
   contents: write
+  actions: write              # necessário para o keepalive reativar o agendamento
 
 jobs:
-  update-age:
+  update-profile:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Calcular idade e atualizar README
+
+      - name: Calcular idade e tempo de experiência
         run: |
           python3 - <<'EOF'
           import re, datetime
-          nasc = datetime.date(1995, 3, 10)   # 10/03/1995
           hoje = datetime.date.today()
+          nasc = datetime.date(1995, 3, 10)          # 10/03/1995
           idade = hoje.year - nasc.year - ((hoje.month, hoje.day) < (nasc.month, nasc.day))
+          exp = hoje.year - 2012                       # dev desde 2012
+
           with open('README.md', encoding='utf-8') as f:
-              conteudo = f.read()
+              c = f.read()
           novo = re.sub(r'(<!-- AGE:START -->).*?(<!-- AGE:END -->)',
-                        rf'\g<1>{idade}\g<2>', conteudo, flags=re.DOTALL)
-          if novo != conteudo:
+                        rf'\g<1>{idade}\g<2>', c, flags=re.DOTALL)
+          novo = re.sub(r'(<!-- EXP:START -->).*?(<!-- EXP:END -->)',
+                        rf'\g<1>{exp}\g<2>', novo, flags=re.DOTALL)
+          if novo != c:
               with open('README.md', 'w', encoding='utf-8') as f:
                   f.write(novo)
           EOF
-      - name: Commit
+
+      - name: Commitar mudanças
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md
-          git diff --staged --quiet || git commit -m "chore: atualiza idade automaticamente"
+          git diff --staged --quiet || git commit -m "chore: atualiza idade e experiência automaticamente"
           git push
+
+      - name: Manter o agendamento vivo
+        uses: gautamkrishnar/keepalive-workflow@v2
+        with:
+          use_api: true
