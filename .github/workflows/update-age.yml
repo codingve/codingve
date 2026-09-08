@@ -6,13 +6,12 @@ on:
 
 permissions:
   contents: write
-  actions: write              # necessário para o keepalive reativar o agendamento
 
 jobs:
   update-profile:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4   # action oficial do GitHub (não é de terceiros)
 
       - name: Calcular idade e tempo de experiência
         run: |
@@ -34,15 +33,23 @@ jobs:
                   f.write(novo)
           EOF
 
-      - name: Commitar mudanças
+      - name: Commitar e manter o agendamento vivo
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Commita a atualização de idade/experiência, se houve mudança
           git add README.md
           git diff --staged --quiet || git commit -m "chore: atualiza idade e experiência automaticamente"
-          git push
 
-      - name: Manter o agendamento vivo
-        uses: gautamkrishnar/keepalive-workflow@v2
-        with:
-          use_api: true
+          # Keepalive sem action de terceiros: se o último commit tiver 50+ dias,
+          # faz um commit vazio para reiniciar o contador de 60 dias e impedir
+          # que o GitHub desative o workflow agendado por inatividade.
+          ultimo=$(git log -1 --format=%ct)
+          agora=$(date +%s)
+          dias=$(( (agora - ultimo) / 86400 ))
+          if [ "$dias" -ge 50 ]; then
+            git commit --allow-empty -m "chore: keepalive do agendamento"
+          fi
+
+          git push
