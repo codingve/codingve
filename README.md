@@ -20,7 +20,7 @@
 - 👯 I'm looking to collaborate on all project where I can challenge myself.
 - 💬 Ask me about anything [here](https://github.com/codingve/codingve/issues)
 - 😄 Pronouns: She/her
-- ⚡ Fun fact: When I was 2 years old I almost lost my tongue when playing "bambolê". Long story.
+- ⚡ Fun fact: When I was 2 years old I almost lost my tongue when playing hula hoop ("bambolê"). Long story.
 
 
 <details>
